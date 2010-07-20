@@ -30,6 +30,7 @@
 (require "chrome-extension-mode/version")
 (require "chrome-extension-mode/chrome-extension-mode")
 
+(use-package :chrome-extension-mode)
 
 (provide "chrome-extension-mode")
 

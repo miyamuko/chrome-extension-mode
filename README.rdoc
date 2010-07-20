@@ -1,4 +1,4 @@
-== chrome-extension-mode - blur blur blur
+== chrome-extension-mode - Google Chrome 拡張の開発支援
 
 * Home URL: http://miyamuko.s56.xrea.com/xyzzy/chrome-extension-mode/intro.htm
 * Version: 0.0.1
@@ -7,15 +7,16 @@
 === SYNOPSIS
 
   (require "chrome-extension-mode")
-  (chrome-extension-mode)
 
-  blur blur blur ...
+  M-x chrome-extension-open-filer
 
 
 === DESCRIPTION
 
-chrome-extension-mode は xyzzy から...
+chrome-extension-mode は xyzzy で Google Chrome 拡張を開発するときに便利な機能を提供します。
+今のところ以下の機能があります。
 
+* インストール済みの Chrome 拡張をファイラで開く
 
 === INSTALL
 
@@ -33,18 +34,23 @@ chrome-extension-mode は xyzzy から...
 
    ※siteinit.l に記述した場合には再ダンプが必要です。
 
-4. 表示 → ツールバー → ブブゼラでツールバーを表示して
-   ボタンを押せばブブゼラがなります。
-
 
 === TODO
 
-なし。
+* インストール済み Chrome 拡張の一覧を表示
+* プロジェクトの雛形の生成
+* zip にする
+* なかいろいろ
 
 
 === KNOWN BUGS
 
 なし。
+
+要望やバグは
+{GitHub Issues}[http://github.com/miyamuko/chrome-extension-mode/issues] か
+{@miyamuko}[http://twitter.com/home?status=%40miyamuko%20chrome-extension-mode%3a%20]
+まで。
 
 
 === AUTHOR

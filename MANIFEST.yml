@@ -14,7 +14,5 @@ files:
   include:
     - site-lisp/**/*.l
     - site-lisp/**/*.lc
-    - site-lisp/chrome-extension-mode/lib/*.dll
-    - site-lisp/chrome-extension-mode/src/**/*.*
     - site-lisp/chrome-extension-mode/examples/**/*.*
     - site-lisp/chrome-extension-mode/tests/*.*

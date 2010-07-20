@@ -1,6 +1,6 @@
 ; -*- mode: lisp; package: chrome-extension-mode -*-
 
-;;; chrome-extension-mode/chrome-extension-mode.l
+;;; chrome-extension-mode/filer.l
 ;;
 ;; Copyright (c) 2010 MIYAMUKO Katsuyuki.
 ;;
@@ -26,16 +26,39 @@
 ;;; Code:
 
 (eval-when (:compile-toplevel :load-toplevel :execute)
-  (require "chrome-extension-mode/package")
+  (mc-require "chrome-extension-mode/package")
+  (mc-require "chrome-extension-mode/extension")
   )
 
 (in-package :chrome-extension-mode)
 
-(export '(chrome-extension-mode
+(export '(chrome-extension-open-filer
           ))
 
+(defun chrome-extension-open-filer (&optional pattern)
+  (interactive "sExtension Name (Regexp): ")
+  (let ((manifest (find-chrome-extension pattern :regexp t :case-fold t)))
+    (unless manifest
+      (message "~S not found." pattern)
+      (return-from chrome-extension-open-filer nil))
+    (message "Found ~A/~A (~A)"
+             (chrome-extension-name manifest)
+             (chrome-extension-version manifest)
+             (chrome-extension-dir manifest))
+    (open-chrome-extension1 manifest)))
 
-(provide "chrome-extension-mode/chrome-extension-mode")
+(defun open-chrome-extension1 (manifest)
+  (let ((*filer-primary-directory* (chrome-extension-dir manifest))
+        (*filer-secondary-directory* (default-directory)))
+    (multiple-value-bind (files result)
+        (let ((omode (get-ime-mode)))
+          (unwind-protect
+              (filer nil t nil t (not *filer-modal*))
+            (and *filer-modal* (toggle-ime omode))))
+      (when result
+        (ed::filer-readin-1 files)))))
 
+
+(provide "chrome-extension-mode/filer")
 
 ;;; End

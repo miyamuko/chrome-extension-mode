@@ -26,7 +26,7 @@
 ;;; Code:
 
 (eval-when (:compile-toplevel :load-toplevel :execute)
-  (require "chrome-extension-mode/package")
+  (mc-require "chrome-extension-mode/package")
   )
 
 (in-package :chrome-extension-mode)

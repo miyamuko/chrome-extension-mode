@@ -26,11 +26,15 @@
 ;;; Code:
 
 (eval-when (:compile-toplevel :load-toplevel :execute)
+  (require "json")
+
   (unless (find-package :chrome-extension-mode)
     (defpackage :chrome-extension-mode
       (:use
        :lisp
        :editor
+
+       :json
        ))))
 
 
