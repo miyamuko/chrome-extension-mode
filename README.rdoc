@@ -49,7 +49,7 @@ chrome-extension-mode は xyzzy で Google Chrome 拡張を開発するときに
 
 要望やバグは
 {GitHub Issues}[http://github.com/miyamuko/chrome-extension-mode/issues] か
-{@miyamuko}[http://twitter.com/home?status=%40miyamuko%20chrome-extension-mode%3a%20]
+{@miyamuko}[http://twitter.com/home?status=%40miyamuko%20%23xyzzy%20chrome-extension-mode%3a%20]
 まで。
 
 
