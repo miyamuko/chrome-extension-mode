@@ -1,3 +1,7 @@
+2010-07-21  MIYAMUKO Katsuyuki
+
+	* require するファイルが間違っていたのを修正
+
 2010-07-20  MIYAMUKO Katsuyuki
 
 	* gist のコードを取り込んだ。

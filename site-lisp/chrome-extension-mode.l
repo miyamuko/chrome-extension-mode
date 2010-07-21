@@ -28,7 +28,7 @@
 (in-package :user)
 
 (require "chrome-extension-mode/version")
-(require "chrome-extension-mode/chrome-extension-mode")
+(require "chrome-extension-mode/filer")
 
 (use-package :chrome-extension-mode)
 
